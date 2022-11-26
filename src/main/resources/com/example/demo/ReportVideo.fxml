@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.ReportController">
+   <children>
+      <Label layoutX="195.0" layoutY="50.0" text="Report Now">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="reportDetail" layoutX="132.0" layoutY="130.0" prefHeight="200.0" prefWidth="377.0" promptText="Enter Report" />
+      <Button fx:id="submitReport" layoutX="294.0" layoutY="345.0" mnemonicParsing="false" onAction="#submitReport" text="Submit" />
+      <Button layoutX="132.0" layoutY="345.0" mnemonicParsing="false" onAction="#backToHome" text="Back" />
+      <Label fx:id="submitReportMessage" layoutX="400.0" layoutY="349.0" textFill="#ff0404" />
+   </children>
+</AnchorPane>

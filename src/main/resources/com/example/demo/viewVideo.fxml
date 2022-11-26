@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="favVideoLabel" prefHeight="444.0" prefWidth="659.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.viewVideoController">
+   <children>
+      <MediaView fx:id="videoPlay" fitHeight="200.0" fitWidth="500.0" layoutX="55.0" layoutY="22.0" />
+      <Text fx:id="videoTitle" layoutX="17.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Video Title Goes Here..." textAlignment="CENTER" wrappingWidth="565.13671875">
+         <font>
+            <Font name="Georgia Bold" size="32.0" />
+         </font>
+      </Text>
+      <Button fx:id="initiateRate" layoutX="461.0" layoutY="329.0" mnemonicParsing="false" onAction="#initiateRate" prefHeight="25.0" prefWidth="124.0" text="Rate Video" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <TextArea fx:id="videoDescription" editable="false" layoutX="80.0" layoutY="292.0" prefHeight="141.0" prefWidth="178.0" />
+      <Button fx:id="Submitcomment" layoutX="278.0" layoutY="395.0" mnemonicParsing="false" onAction="#commentVideo" prefHeight="25.0" prefWidth="124.0" text="Submit Comment" />
+      <Button fx:id="shareVideo" layoutX="461.0" layoutY="395.0" mnemonicParsing="false" onAction="#shareVideo" prefHeight="25.0" prefWidth="124.0" text="Share" />
+      <Button fx:id="viewComment" layoutX="459.0" layoutY="362.0" mnemonicParsing="false" onAction="#viewComments" prefHeight="25.0" prefWidth="124.0" text="View Comments" />
+      <TextArea fx:id="writeComment" layoutX="271.0" layoutY="292.0" prefHeight="94.0" prefWidth="171.0" promptText="Write Comment" />
+      <Label layoutX="17.0" layoutY="292.0" text="Description" />
+      <Label fx:id="commentSubmitStatus" layoutX="601.0" layoutY="298.0" textFill="#00a146" />
+      <Button layoutX="2.0" layoutY="14.0" mnemonicParsing="false" onAction="#backToHome" text="Back" />
+      <Button fx:id="addToFavourite" layoutX="467.0" layoutY="297.0" mnemonicParsing="false" onAction="#addToFavourite" prefHeight="25.0" prefWidth="117.0" text="Add To Favourites" />
+      <Button fx:id="reportVideo" layoutX="561.0" layoutY="197.0" mnemonicParsing="false" onAction="#reportVideo" text="Report Now" />
+      <Label fx:id="favVideo" layoutX="601.0" layoutY="298.0" textFill="#eb0505" />
+   </children>
+</AnchorPane>
