@@ -48,19 +48,24 @@ Viewer viewerRef=new Viewer();
         ConfirmPassword = confirmPassword.getText();
 
         if ((!(FirstName.equals("") )) && (!(LastName.equals(""))) && (!(Username.equals(""))) && (!(Email.equals(""))) && (!(Password.equals(""))) && (!(ConfirmPassword.equals("")))) {
+                if(Password.length()>=8) {
+                    if (Password.equals(ConfirmPassword)) {
 
-            if (Password.equals(ConfirmPassword)) {
+                        if (viewerRef.alreadyExist(Username)) {
+                            System.out.println("Inside");
+                            Viewer viewer = new Viewer(FirstName, LastName, Username, Email, Password);
 
-                if (viewerRef.alreadyExist(Username)) {
-                    System.out.println("Inside");
-                    Viewer viewer = new Viewer(FirstName, LastName, Username, Email, Password);
-
-                    viewer.viwerList.add(viewer);
-                    ha.main("loginPage",event);
+                            viewer.viwerList.add(viewer);
+                            ha.main("loginPage", event);
+                        } else {
+                            usernameExist.setText("Username already Taken");
+                        }     //userName Exist
+                    } else {
+                        passwordMatch.setText("Password Does Not Match");
+                    }      //password Does Not Match
+                }else{
+                    enterAllField.setText("Password must be Minimum of 8 Characters Only");
                 }
-                else {usernameExist.setText("Username already Taken");}     //userName Exist
-            } else {passwordMatch.setText("Password Does Not Match");}      //password Does Not Match
-
         }else {enterAllField.setText("Please Enter All Fields");}           //user haven't filled all the fields
     }
 
